@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  demo:
+    build:
+      context: .
+    container_name: demo
+    ports:
+      - "8080:8080"
+    environment:
+      - TZ = Europe/Oslo
+    env_file:
+      - .env
+    network_mode: bridge
